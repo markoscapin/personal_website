@@ -1,0 +1,131 @@
+/* VARIABLES */
+
+:root {
+    --blue-500: #3586EB;
+    --blue-400: #599BE7;
+    --blue-300: #80BCF8;
+    --dark-500: #2B2F34;
+    --dark-400: #34393E;
+    --dark-300: #5C636A;
+    --dark-200: #C8D1D5;
+    --white: #fff
+}
+
+/* TAGS */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-400);
+}
+
+nav {
+    background-color: var(--white);
+    box-shadow: 0px 4px 4px rgba(53, 134, 235, 0.25);
+    letter-spacing: 0.15rem;
+}
+
+nav ul {
+    display: inline-flex;
+    gap: 2em
+}
+
+nav li {
+    list-style: none;
+    
+}
+
+h1 {
+    font-size: 3em;
+}
+
+footer {
+    background-color: var(--dark-300);
+    
+}
+
+
+/* IDS */
+#profile-picture {
+    border-radius: 100%;
+    border: 10px solid var(--blue-500) 
+}
+
+#skills {
+    background-color: var(--blue-300);
+}
+
+
+/* CLASSES */
+.page-wrapper {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.space-y {
+    gap: 1em;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.highlight-word {
+    color: var(--blue-500);
+}
+
+.card {
+    background-color: white;
+    color: var(--dark-400);
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(53, 134, 235, 0.25);
+    padding: 3em;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+.project-card {
+    border-radius: 15px;
+    border: 10px solid var(--blue-300); 
+    width: 350px;
+    height: 250px;
+}
+
+.action-button {
+    padding: 1em 4em;
+    background-color: var(--blue-400);
+    color: white;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(53, 134, 235, 0.25);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: large;
+
+
+}
+
+.action-button :hover {
+    background-color: var(--blue-500);
+}
