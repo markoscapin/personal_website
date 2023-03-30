@@ -21,6 +21,9 @@
     color: var(--dark-400);
 }
 
+html {
+    scroll-behavior: smooth;
+}
 nav {
     background-color: var(--white);
     box-shadow: 0px 4px 4px rgba(53, 134, 235, 0.25);
@@ -54,7 +57,7 @@ footer {
 }
 
 #skills {
-    background-color: var(--blue-300);
+    background-color: var(--blue-400);
 }
 
 
@@ -107,9 +110,13 @@ footer {
 
 .project-card {
     border-radius: 15px;
-    border: 10px solid var(--blue-300); 
-    width: 350px;
+    border: 10px solid var(--blue-400); 
+    /* width: 350px; */
     height: 250px;
+}
+
+.project-card:hover {
+    border: 10px solid var(--blue-500);
 }
 
 .action-button {
@@ -126,6 +133,23 @@ footer {
 
 }
 
-.action-button :hover {
-    background-color: var(--blue-500);
+.action-button:hover {
+    animation: wow-background 2s infinite;
 }
+
+@keyframes wow-background {
+    0% {
+        
+        background-color: var(--blue-500);
+    }
+    50% {
+        background-color: var(--dark-300)
+        
+    }
+    100% {
+        background-color: var(--blue-500);
+    }
+}
+
+
+
