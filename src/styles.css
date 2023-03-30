@@ -93,6 +93,10 @@ footer {
     color: var(--blue-500);
 }
 
+.underscore {
+    animation: blink 1s infinite;
+}
+
 .card {
     background-color: white;
     color: var(--dark-400);
@@ -117,6 +121,10 @@ footer {
 
 .project-card:hover {
     border: 10px solid var(--blue-500);
+}
+
+.type-animate-end {
+    animation: blink 0.5 step-end infinite ;
 }
 
 .action-button {
@@ -149,6 +157,13 @@ footer {
     100% {
         background-color: var(--blue-500);
     }
+}
+
+@keyframes blink {
+    0% {
+        visibility: visible;
+    }
+    100% {visibility: hidden;}
 }
 
 
