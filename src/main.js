@@ -1,43 +1,23 @@
-function type(mainWrapper, speed) {
+// IMPORT STATEMENTS
+import * as type from './type.js'
 
-    function isSingleNode(element) {
-        return element.childElementCount === 0
-    }
-
-     function typeChild(element, parent) {
-        const tag = document.createElement(element.tagName)
-        tag.classList = element.classList
-        parent.append(tag)
-        var i = 0
-        var timer =  setInterval(()=> {
-            if (i<element.innerHTML.length +1 ) {
-                    tag.innerHTML = element.innerHTML.substring(0,i)
-                    i++
-            } else {
-                clearInterval(timer)
-            }
-        }, speed)
-    } 
-
-    function iterate(wrapper, parent) {
-        wrapper.childNodes.forEach((element, index)=> {
-            if (element.tagName === undefined) {
-                return
-            }
-            setTimeout(()=> {
-                typeChild(element, parent)
-            },1000*index)
-            
-        }
-        )
-    }
-
-    const wrapper = document.createElement("div")
-    wrapper.innerHTML = mainWrapper.innerHTML
-    mainWrapper.innerHTML = "";
-
-    iterate(wrapper, mainWrapper)
-}
-
+// QUERY SELECTORS
 const typewriter = document.querySelector(".typewriter")
+const nav = document.querySelector('nav')
+const navButton = document.querySelector('#navbar-button')
+let open = false
+
+
+//LISTENERS
+navButton.addEventListener('click', (e)=> {
+    if (open) {
+        nav.querySelector('ul').style.display = 'none'
+        open = !open
+    } else {
+        nav.querySelector('ul').style.display = 'block'
+        open = !open
+    }
+})
+
+//ANIMATIONS
 type(typewriter,25)

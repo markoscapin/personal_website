@@ -21,6 +21,11 @@
     color: var(--dark-400);
 }
 
+button {
+    border: 0;
+    background-color: transparent;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -71,10 +76,18 @@ footer {
     background-color: var(--blue-400);
 }
 
+#navbar-button {
+    display: none;
+}
+
 
 /* CLASSES */
 .contact:hover {
     color: var(--blue-500);
+}
+
+.contact {
+    margin-left: auto;
 }
 
 .logo-wrapper {
@@ -86,6 +99,10 @@ footer {
 
 .gap {
     gap: 4rem;
+}
+
+.py-2 {
+    padding: 2em 0;
 }
 
 .py-4 {
@@ -197,23 +214,64 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-    .page-wrapper.flex-row {
+    
+    #hero .page-wrapper.flex-row {
         flex-direction: column-reverse;
         justify-content: center!important;
     }
     .page-wrapper {
         max-width: 95%;
     }
+
+    .page-wrapper.flex-row {
+        flex-direction: column;
+        justify-content: center!important;
+    }
+
     #profile-picture-wrapper {
         margin: auto;
     }
     #hero {
         margin: 2rem 0;
     }
+    #profile-picture {
+        width: 150px;
+        height: 150px;
+    }
     .gap {
         gap: 1rem;
+    }
+    .works-grid {
+        grid-template-columns: auto auto;
+        column-gap: 10px;
+        row-gap: 15px;
     }
 }
 
 
 
+
+@media screen and (max-width: 700px) {
+    nav ul{
+        flex-direction: column;
+        justify-content: start!important;
+        display: none;
+    }
+    nav ul li {
+        padding: 0.2rem 0;
+    }
+    nav div {
+        padding: 1em!important;
+    }
+
+    #nav-logo {
+        display: none;
+    }
+
+    #navbar-button {
+        display: block;
+    }
+    .contact {
+        margin: 0;
+    }
+}

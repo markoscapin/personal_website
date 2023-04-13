@@ -17,18 +17,23 @@
 </head>
 <body>
     <nav>
-        <div class="page-wrapper flex-row justify-between" style="padding: 2em 0;">
-            <ul>
-                <li>
-                <a href="/">
-                    <img src="/public/logo/light.svg" width="20" height="20">
-                </a>
+       
+        <div class="page-wrapper flex-row justify-between py-2">
+            <button type="button" id="navbar-button">
+                <img alt="logo" src="/public/logo/light.svg" width="45" height="45">
+            </button>
+            <ul style="width: 100%;">
+                <li id="nav-logo">
+                    <a href="/">
+                        <img alt="logo" src="/public/logo/light.svg" width="20" height="20">
+                    </a>
                 </li>
                 <li><a href="#skills">About Me</a></li>
                 <li><a href="#work">My Work</a></li>
                 <li><a href="#action">Collaboration</a></li>
+                <li class="contact" ><a  href="mailto:markoscapin@gmail.com">Contact Me</a></li>
             </ul>
-            <p ><a class="contact" href="mailto:markoscapin@gmail.com">Contact Me</a></p>
+
         </div>
     </nav>
     <!-- HERO -->
@@ -124,7 +129,7 @@
             </a>
         </div>
     </section>
-    <script src="/src/main.js"></script>
+    <script src="/src/main.js" type="module"></script>
 </body>
 <footer class="flex-col items-center">
     <div class="logo-wrapper">
