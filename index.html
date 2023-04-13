@@ -8,6 +8,7 @@
     <meta name="title" content="Marco Scapin">
     <meta name="description" content="Hey there! It's Marco here, welcome to my personal space! I’m a Full Stack Web Developer in love with technologies and companies with big visions, bringing value to the future.
     ">
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -17,23 +18,28 @@
 <body>
     <nav>
         <div class="page-wrapper flex-row justify-between" style="padding: 2em 0;">
-            <ul >
-                <li>About Me</li>
-                <li>My Work</li>
-                <li>Collaboration</li>
+            <ul>
+                <li>
+                <a href="/">
+                    <img src="/public/logo/light.svg" width="20" height="20">
+                </a>
+                </li>
+                <li><a href="#skills">About Me</a></li>
+                <li><a href="#work">My Work</a></li>
+                <li><a href="#action">Collaboration</a></li>
             </ul>
-            <p><a href="mailto:markoscapin@gmail.com">Contact Me</a></p>
+            <p ><a class="contact" href="mailto:markoscapin@gmail.com">Contact Me</a></p>
         </div>
     </nav>
     <!-- HERO -->
-    <section id="hero" style="margin: 10em 0">
-        <div class="page-wrapper flex-row justify-between" style="gap: 4rem;">
+    <section id="hero">
+        <div class="page-wrapper flex-row justify-between gap">
             <div class="flex-col space-y typewriter" style="padding-top: 3rem">
                 <h1 class="type-animate-end highlight-word">Hey! It’s Marco here_</h1>
                 <h2>Welcome to my personal space!</h4>
                 <p>I’m a Full Stack Web Developer in love with technologies and companies with big visions, bringing value to the future.</p>
             </div>
-            <div >
+            <div id="profile-picture-wrapper">
                 <!-- image -->
                 <img id="profile-picture" width="325" height="325" src="/public/me.JPG" alt="my profile picture"></img>
             </div>
@@ -41,7 +47,7 @@
     </section>
 
     <section id="skills">
-        <div class="page-wrapper flex-col space-y" style="padding: 4em 0;">
+        <div class="page-wrapper flex-col space-y py-4">
             <div class="flex-col items-center">
                 <p style="text-align: center; color: white;" >
                     In the past couple of years I jumped from mobile app development to web development, willing to know more about the technologies that runs the present, so to be able to imagine the future. 
@@ -121,6 +127,9 @@
     <script src="/src/main.js"></script>
 </body>
 <footer class="flex-col items-center">
+    <div class="logo-wrapper">
+        <img src="/public/logo/light.svg" width="60" height="60">
+    </div>
     <div style="padding: 4em 0;">
         <p style="color: white">All right reserved. Mabe by Marco Scapin</p>
     </div>

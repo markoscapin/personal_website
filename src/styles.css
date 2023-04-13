@@ -25,9 +25,12 @@ html {
     scroll-behavior: smooth;
 }
 nav {
-    background-color: var(--white);
+    background-color: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
     box-shadow: 0px 4px 4px rgba(53, 134, 235, 0.25);
     letter-spacing: 0.15rem;
+    position: sticky;
+    top: 0;
 }
 
 nav ul {
@@ -38,6 +41,10 @@ nav ul {
 nav li {
     list-style: none;
     
+}
+
+ul li a:hover {
+    color: var(--blue-500);
 }
 
 h1 {
@@ -51,6 +58,10 @@ footer {
 
 
 /* IDS */
+#hero {
+    margin: 10em 0
+}
+
 #profile-picture {
     border-radius: 100%;
     border: 10px solid var(--blue-500) 
@@ -62,6 +73,25 @@ footer {
 
 
 /* CLASSES */
+.contact:hover {
+    color: var(--blue-500);
+}
+
+.logo-wrapper {
+    margin: 2rem 0 1rem;
+    padding: 1rem;
+    border-radius: 100%;
+    background-color: var(--white);
+}
+
+.gap {
+    gap: 4rem;
+}
+
+.py-4 {
+    padding: 4em 0;
+}
+
 .page-wrapper {
     max-width: 60%;
     margin: 0 auto;
@@ -164,6 +194,25 @@ footer {
         visibility: visible;
     }
     100% {visibility: hidden;}
+}
+
+@media screen and (max-width: 900px) {
+    .page-wrapper.flex-row {
+        flex-direction: column-reverse;
+        justify-content: center!important;
+    }
+    .page-wrapper {
+        max-width: 95%;
+    }
+    #profile-picture-wrapper {
+        margin: auto;
+    }
+    #hero {
+        margin: 2rem 0;
+    }
+    .gap {
+        gap: 1rem;
+    }
 }
 
 
