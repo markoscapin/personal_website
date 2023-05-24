@@ -16,127 +16,62 @@
     
 </head>
 <body>
-    <nav>
-       
-        <div class="page-wrapper flex-row justify-between py-2">
-            <button type="button" id="navbar-button">
-                <img alt="logo" src="./public/logo/light.svg" width="45" height="45">
-            </button>
-            <ul style="width: 100%;">
-                <li id="nav-logo">
-                    <a href="/">
-                        <img alt="logo" src="./public/logo/light.svg" width="20" height="20">
-                    </a>
-                </li>
-                <li><a href="#skills">About Me</a></li>
-                <li><a href="#work">My Work</a></li>
-                <li><a href="#action">Collaboration</a></li>
-                <li class="contact" ><a  href="mailto:markoscapin@gmail.com">Contact Me</a></li>
-            </ul>
+    <div class="ellipse"></div>
+    <p class="terminal">markoscapin ~ % ls<br/>
+        <a href="#interests">Interests</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contacts">Contacts</a>
 
+    </p>
+    <article id="intro">
+        <div>
+            <h1>Hey! <br/>It’s Marco here_</h1>
+            <h3>Welcome to my Personal Space!</h3>
         </div>
-    </nav>
-    <!-- HERO -->
-    <section id="hero">
-        <div class="page-wrapper flex-row justify-between gap">
-            <div class="flex-col space-y typewriter" style="padding-top: 3rem">
-                <h1 class="type-animate-end highlight-word">Hey! It’s Marco here_</h1>
-                <h2>Welcome to my personal space!</h4>
-                <p>I’m a Full Stack Web Developer in love with technologies and companies with big visions, bringing value to the future.</p>
-            </div>
-            <div id="profile-picture-wrapper">
-                <!-- image -->
-                <img id="profile-picture" width="325" height="325" src="./public/me.JPG" alt="my profile picture"></img>
-            </div>
-        </div>
-    </section>
+        <p>I’m a Full Stack Web Developer in love with technologies and companies with big visions, bringing value to the future.
+        </p>
+    </article>
+    <article id="interests">
+        <h3>Interests</h3>
+        <p class="terminal">
+            markoscapin ~ % cd interests<br/>
+            markoscapin interests % 
+        </p>
+        <p>In the past couple of years I jumped from mobile app development to web development,willing to know more about the technologies that runs the present, so to be able to imagine the future. </p>
+    </article>
+    <article id="skills">
+        <h3>Skills</h3>
+        <p class="terminal">
+            markoscapin ~ % cd ../skills<br/>
+            markoscapin skills % ls <br/>
+            Web Development <br/>
+            App Development <br/>
+            Databases <br/>
+            Graphics and Software <br/>
+        </p>
+        <p class="terminal">
+            click to expand fields
+        </p>
+        <p>I like to code things from scratch, especially if it comes to personalize the experience. When it comes to build something new, these technologies can’t miss.</p>
+    </article>
+    <article id="projects">
+        <h3>Projects</h3>
+        <p class="terminal">
+            markoscapin skills % cd ~/projects<br/>
+            markoscapin projects %  <br/>
+        </p>
+        <p>At the end of the day we are all humans and people see only what’s done. Technologies and frameworks are tools to enhance humans creativity, empowering people and businesses to achieve goals.</p>
+    </article>
+    <article id="contacts">
+        <h3>Contacts</h3>
+        <p class="terminal">
+            markoscapin skills % cd ~/contacts<br/>
+            markoscapin contacts %  <br/>
+        </p>
+        <p>I’m always open to discussing web development work, partnership or new job opportunities.</p>
+    </article>
 
-    <section id="skills">
-        <div class="page-wrapper flex-col space-y py-4">
-            <div class="flex-col items-center">
-                <p style="text-align: center; color: white;" >
-                    In the past couple of years I jumped from mobile app development to web development, willing to know more about the technologies that runs the present, so to be able to imagine the future. 
-                </p>
-                <h3 style="color: white; margin: 2em 0">What I’ve learn so far</h3>
-            </div>
-            <div class="card">
-                <h4>Full Stack Developer</h5>
-                <p>I like to code things from scratch, building a custom experience of the website.</p>
-                <ul>
-                    <li>
-                        HTML, CSS, Javascript, Typescript
-                    </li>
-                    <li>Node.js</li>
-                    <li>REST API</li>
-                    <li>React</li>
-                    <li>Nextjs</li>
-                    <li>Git and Github</li>  
-                </ul>
-            </div>
-
-            <div class="card">
-                <h4>UI Frameworks and Design Software</h5>
-                <p>I love the way UI Frameworks standardize interfaces, bring familiarity to the website.</p>
-                <ul>
-                    <li>Tailwind CSS</li>
-                    <li>Bootstrap 5</li>
-                    <li>MUI</li>
-                    <li>Figma</li>
-                    <li>Adobe Illustrator</li> 
-                </ul>
-            </div>
-
-            <div class="card">
-                <h4>Database Technologies</h5>
-                <p>There’s nothing more important than data. Without them, the life would not be the same.</p>
-                <ul>
-                    <li>Relational Databases (MySQL, PostgreSQL)</li>
-                    <li>NoSQL Databases (MongoDB)</li>
-                    <li>ORM (Sequelize, Prisma)</li>
-                    <li>GraphQL</li> 
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="work">
-        <div class="page-wrapper flex-col space-y" style="padding: 4em 0;">
-            <div class="flex-col items-center">
-                <p style="text-align: center;" >
-                    At the end of the day we are all humans and people see only what’s done. Technologies and frameworks are tools to enhance humans creativity, empowering people and businesses to achieve <span class="highlight-word">goals</span>.
-                </p>
-                <h3 style="margin: 2em 0">Here’s my work</h3>
-            </div>
-            <div class="works-grid">
-                <div class="project-card"></div>
-                <div class="project-card"></div>
-                <div class="project-card"></div>
-                <div class="project-card"></div>
-                <div class="project-card"></div>
-                <div class="project-card"></div>
-            </div>
-
-    </section>
-
-    <section id="action" style="padding: 4em 0;">
-        <div class="page-wrapper flex-col space-y items-center">
-            <h3>Interested in collaborating with me?</h3>
-            <p>I’m always open to discussing web development work, partnership or new job opportunities.</p>
-            <a href="mailto:markoscapin@gmail.com">
-                <button type="button" class="action-button">
-                Let's talk_
-                </button>
-            </a>
-        </div>
-    </section>
     <script src="./src/main.js" type="module"></script>
 </body>
-<footer class="flex-col items-center">
-    <div class="logo-wrapper">
-        <img src="./public/logo/light.svg" width="60" height="60">
-    </div>
-    <div style="padding: 4em 0;">
-        <p style="color: white">All right reserved. Mabe by Marco Scapin</p>
-    </div>
-</footer>
 </html>

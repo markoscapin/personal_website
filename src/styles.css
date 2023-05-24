@@ -1,14 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nanum+Gothic+Coding&display=swap');
+
 /* VARIABLES */
 
+
+
 :root {
-    --blue-500: #3586EB;
-    --blue-400: #599BE7;
-    --blue-300: #80BCF8;
-    --dark-500: #2B2F34;
-    --dark-400: #34393E;
-    --dark-300: #5C636A;
-    --dark-200: #C8D1D5;
-    --white: #fff
+    --white: rgba(255,255,255,0.85);
+    --terminal-color: rgba(36,255,0,.85);
+    --dark: rgba(0, 0, 0, 0.90)
+
 }
 
 /* TAGS */
@@ -17,9 +17,26 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    color: var(--dark-400);
 }
+
+body {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    border-radius: 15px;
+    position: relative;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+body:hover {
+    z-index: 10;
+    animation: darken ease-in-out 1s;
+    background-color: var(--dark);
+}
+
+
 
 button {
     border: 0;
@@ -28,250 +45,89 @@ button {
 
 html {
     scroll-behavior: smooth;
-}
-nav {
-    background-color: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(12px);
-    box-shadow: 0px 4px 4px rgba(53, 134, 235, 0.25);
-    letter-spacing: 0.15rem;
-    position: sticky;
-    top: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    font-size: 1.25em;
+    background-color: var(--dark);
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
-nav ul {
-    display: inline-flex;
-    gap: 2em
+.terminal {
+    font-family: 'Nanum Gothic Coding', monospace!important;
+    color: var(--terminal-color)!important;
+    font-size: 14px!important;
 }
 
-nav li {
-    list-style: none;
+.terminal a {
+    font-family: 'Nanum Gothic Coding', monospace!important;
+    color: var(--terminal-color)!important;
+    font-size: 14px!important;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.terminal a:focus-visible {
+    border: none;
+    outline: 0;
+    outline-offset: 0cm;
+    outline-style: none;
+    animation: terminal_focus infinite 0.5s
     
 }
 
-ul li a:hover {
-    color: var(--blue-500);
-}
-
-h1 {
-    font-size: 3em;
-}
-
-footer {
-    background-color: var(--dark-300);
-    
-}
-
-
-/* IDS */
-#hero {
-    margin: 10em 0
-}
-
-#profile-picture {
-    border-radius: 100%;
-    border: 10px solid var(--blue-500) 
-}
-
-#skills {
-    background-color: var(--blue-400);
-}
-
-#navbar-button {
-    display: none;
-}
-
-
-/* CLASSES */
-.contact:hover {
-    color: var(--blue-500);
-}
-
-.contact {
-    margin-left: auto;
-}
-
-.logo-wrapper {
-    margin: 2rem 0 1rem;
-    padding: 1rem;
-    border-radius: 100%;
-    background-color: var(--white);
-}
-
-.gap {
-    gap: 4rem;
-}
-
-.py-2 {
-    padding: 2em 0;
-}
-
-.py-4 {
-    padding: 4em 0;
-}
-
-.page-wrapper {
-    max-width: 60%;
-    margin: 0 auto;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.flex-col {
+article {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 }
 
-.space-y {
-    gap: 1em;
+
+.ellipse {
+    position: absolute;
+    width: 409.12px;
+    height: 1156.65px;
+    left: 20%;
+    top: -188px;
+    overflow: hidden;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(36, 255, 0, 0.3) 5.73%, rgba(36, 255, 0, 0) 100%);
+    mix-blend-mode: normal;
+    transform: rotate(51.96deg);
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 26;
+    flex-grow: 0;
+    z-index: 26;
 }
 
-.justify-between {
-    justify-content: space-between;
-}
-
-.items-center {
-    align-items: center;
-}
-
-.highlight-word {
-    color: var(--blue-500);
-}
-
-.underscore {
-    animation: blink 1s infinite;
-}
-
-.card {
-    background-color: white;
-    color: var(--dark-400);
-    border-radius: 15px;
-    box-shadow: 0px 4px 4px rgba(53, 134, 235, 0.25);
-    padding: 3em;
-}
-
-.works-grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 10px;
-    row-gap: 15px;
-}
-
-.project-card {
-    border-radius: 15px;
-    border: 10px solid var(--blue-400); 
-    /* width: 350px; */
-    height: 250px;
-}
-
-.project-card:hover {
-    border: 10px solid var(--blue-500);
-}
-
-.type-animate-end {
-    animation: blink 0.5 step-end infinite ;
-}
-
-.action-button {
-    padding: 1em 4em;
-    background-color: var(--blue-400);
-    color: white;
-    border-radius: 15px;
-    border: none;
-    box-shadow: 0px 4px 4px rgba(53, 134, 235, 0.25);
-    cursor: pointer;
-    font-weight: 700;
-    font-size: large;
-
-
-}
-
-.action-button:hover {
-    animation: wow-background 2s infinite;
-}
-
-@keyframes wow-background {
+@keyframes terminal_focus {
     0% {
-        
-        background-color: var(--blue-500);
+        transition-delay: 1s;
+        transition-property: color;
+        background-color: var(--terminal-color);
+        color: var(--white);
     }
     50% {
-        background-color: var(--dark-300)
-        
+        transition-delay: 1s;
+        transition-property: color;
+        background-color: transparent;
+        color: var(--terminal-color);
     }
     100% {
-        background-color: var(--blue-500);
+        transition-delay: 1s;
+        transition-property: color;
+        background-color: var(--terminal-color);
+        color: var(--white);
     }
 }
 
-@keyframes blink {
-    0% {
-        visibility: visible;
+@keyframes darken {
+    0%{
+        background-color: transparent;
     }
-    100% {visibility: hidden;}
-}
-
-@media screen and (max-width: 900px) {
-    
-    #hero .page-wrapper.flex-row {
-        flex-direction: column-reverse;
-        justify-content: center!important;
-    }
-    .page-wrapper {
-        max-width: 95%;
-    }
-
-    .page-wrapper.flex-row {
-        flex-direction: column;
-        justify-content: center!important;
-    }
-
-    #profile-picture-wrapper {
-        margin: auto;
-    }
-    #hero {
-        margin: 2rem 0;
-    }
-    #profile-picture {
-        width: 150px;
-        height: 150px;
-    }
-    .gap {
-        gap: 1rem;
-    }
-    .works-grid {
-        grid-template-columns: auto auto;
-        column-gap: 10px;
-        row-gap: 15px;
-    }
-}
-
-
-
-
-@media screen and (max-width: 700px) {
-    nav ul{
-        flex-direction: column;
-        justify-content: start!important;
-        display: none;
-    }
-    nav ul li {
-        padding: 0.2rem 0;
-    }
-    nav div {
-        padding: 1em!important;
-    }
-
-    #nav-logo {
-        display: none;
-    }
-
-    #navbar-button {
-        display: block;
-    }
-    .contact {
-        margin: 0;
-    }
+    100% {
+        background-color: var(--dark);
+    } 
 }
