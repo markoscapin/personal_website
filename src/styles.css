@@ -7,7 +7,8 @@
 :root {
     --white: rgba(255,255,255,0.85);
     --terminal-color: rgba(36,255,0,.85);
-    --dark: rgba(0, 0, 0, 0.90)
+    --dark: rgba(0, 0, 0, 0.90);
+    --maxWidth : 640px
 
 }
 
@@ -19,24 +20,41 @@
     margin: 0;
 }
 
-body {
-    max-width: 640px;
+
+main {
+    max-width: var(--maxWidth);
     display: flex;
     flex-direction: column;
-    margin: 1rem auto;
     border-radius: 15px;
     position: relative;
     gap: 1.5rem;
-    padding: 1rem 2rem;
+    padding:  0 1rem 2rem;
+    margin: 0 auto;
 }
 
-body:hover {
-    z-index: 10;
+article:hover {
     animation: darken ease-in-out 1s;
     background-color: var(--dark);
+}  
+
+nav {
+    background-color: #000;
+    position: sticky;
+    display: block;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 20px 20px var(--dark);
+    opacity: 1;
+    width: 100vw;
+    margin: 0 auto 3rem;
+    padding: 0 0 3px;
 }
 
-
+nav .nav-header {
+    width: var(--maxWidth);
+    margin: 0 auto;
+    padding:  0 1rem ;
+}
 
 button {
     border: 0;
@@ -51,6 +69,7 @@ html {
     background-color: var(--dark);
     min-width: 100vw;
     min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
 .terminal {
@@ -72,34 +91,63 @@ html {
     outline: 0;
     outline-offset: 0cm;
     outline-style: none;
-    animation: terminal_focus infinite 0.5s
-    
+    animation: terminal_focus infinite 0.5s 
+}
+
+.terminal a:hover {
+    border: none;
+    outline: 0;
+    outline-offset: 0cm;
+    outline-style: none;
+    animation: terminal_focus infinite 0.5s 
 }
 
 article {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding: 1rem;
+    border-radius: 15px;
 }
 
 
-.ellipse {
+html::before {
+    position: fixed;
+    content: "";
+    background-image: url('/public/ellipse.png');
+    background-repeat: inherit;
+    background-clip:content-box;
+    background-size: unset;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+#intro::before {
+    pointer-events: none;
+    content: "";
+    background-image: url(/public/me.JPG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-clip: content-box;
     position: absolute;
-    width: 409.12px;
-    height: 1156.65px;
-    left: 20%;
-    top: -188px;
-    overflow: hidden;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(36, 255, 0, 0.3) 5.73%, rgba(36, 255, 0, 0) 100%);
-    mix-blend-mode: normal;
-    transform: rotate(51.96deg);
+    opacity: 0;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    border-radius: 0 15px 15px 0 ;
+    z-index: 0;
+}
 
-    /* Inside auto layout */
+#intro {
+    position: relative;
+}
 
-    flex: none;
-    order: 26;
-    flex-grow: 0;
-    z-index: 26;
+#intro:hover:before{
+    opacity: 0.45;
+    animation: compare_bg_img ease-in-out 1s ;
 }
 
 @keyframes terminal_focus {
@@ -130,4 +178,13 @@ article {
     100% {
         background-color: var(--dark);
     } 
+}
+
+@keyframes compare_bg_img {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.45;
+    }
 }

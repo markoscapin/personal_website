@@ -16,24 +16,27 @@
     
 </head>
 <body>
-    <div class="ellipse"></div>
-    <p class="terminal">markoscapin ~ % ls<br/>
-        <a href="#interests">Interests</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contacts">Contacts</a>
+    <nav>
+        <div class="nav-header">
+            <p class="terminal" style="padding: 1rem;">markoscapin ~ % ls<br/>
+                <a href="#interests">Interests</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contacts">Contacts</a>
 
-    </p>
-    <article id="intro">
-        <div>
-            <h1>Hey! <br/>It’s Marco here_</h1>
-            <h3>Welcome to my Personal Space!</h3>
+            </p> 
         </div>
-        <p>I’m a Full Stack Web Developer in love with technologies and companies with big visions, bringing value to the future.
-        </p>
+    </nav>
+    <main>
+    <article id="intro">
+        <div class="typewriter">
+            <h1>Hey! <br/>It’s Marco here_</h1>
+            <p>I’m a Full Stack Web Developer in love with technologies and companies with big visions, bringing value to the future.</p>
+        </div>
+        
     </article>
     <article id="interests">
-        <h3>Interests</h3>
+        <h2>Interests</h2>
         <p class="terminal">
             markoscapin ~ % cd interests<br/>
             markoscapin interests % 
@@ -41,14 +44,14 @@
         <p>In the past couple of years I jumped from mobile app development to web development,willing to know more about the technologies that runs the present, so to be able to imagine the future. </p>
     </article>
     <article id="skills">
-        <h3>Skills</h3>
+        <h2>Skills</h2>
         <p class="terminal">
             markoscapin ~ % cd ../skills<br/>
             markoscapin skills % ls <br/>
-            Web Development <br/>
-            App Development <br/>
-            Databases <br/>
-            Graphics and Software <br/>
+            <a href="">Web Development</a> <br/>
+            <a href="">App Development</a> <br/>
+            <a href="">Databases</a> <br/>
+            <a href="">Graphics and Software</a> <br/>
         </p>
         <p class="terminal">
             click to expand fields
@@ -56,7 +59,7 @@
         <p>I like to code things from scratch, especially if it comes to personalize the experience. When it comes to build something new, these technologies can’t miss.</p>
     </article>
     <article id="projects">
-        <h3>Projects</h3>
+        <h2>Projects</h2>
         <p class="terminal">
             markoscapin skills % cd ~/projects<br/>
             markoscapin projects %  <br/>
@@ -64,14 +67,15 @@
         <p>At the end of the day we are all humans and people see only what’s done. Technologies and frameworks are tools to enhance humans creativity, empowering people and businesses to achieve goals.</p>
     </article>
     <article id="contacts">
-        <h3>Contacts</h3>
+        <h2>Contacts</h2>
         <p class="terminal">
             markoscapin skills % cd ~/contacts<br/>
             markoscapin contacts %  <br/>
         </p>
         <p>I’m always open to discussing web development work, partnership or new job opportunities.</p>
     </article>
-
+    </main>
     <script src="./src/main.js" type="module"></script>
+    <script src="'./src/type.js" type="module"></script>
 </body>
 </html>

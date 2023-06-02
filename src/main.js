@@ -1,8 +1,8 @@
-// // IMPORT STATEMENTS
-// import * as type from './type.js'
+// IMPORT STATEMENTS
+import type from './type.js'
 
-// // QUERY SELECTORS
-// const typewriter = document.querySelector(".typewriter")
+// QUERY SELECTORS
+//const typewriter = document.querySelector(".typewriter")
 // const nav = document.querySelector('nav')
 // const navButton = document.querySelector('#navbar-button')
 // let open = false
@@ -19,5 +19,5 @@
 //     }
 // })
 
-// //ANIMATIONS
-// type(typewriter,25)
+//ANIMATIONS
+//type(typewriter,25)
